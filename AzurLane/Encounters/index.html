@@ -39,6 +39,7 @@ $("#map").change(function(e){
 });
 
 function loadMap(json_path){
+	$("#encounter").empty();
 	map = $.getScript(json_path, function(data){
 		$.each(map["encounters"], function(i, encounter){
 			$("#encounter").append(new Option(encounter["name"], i))
