@@ -1,6 +1,137 @@
-maps = {
-	'Chapter12/1201.json': '12-1',
-	'Chapter12/1202.json': '12-2',
-	'Chapter12/1203.json': '12-3',
-	'Chapter12/1204.json': '12-4',
+chapters = {
+	'Chapter 1': {
+		'Chapter1/101.json': '1-1',
+		'Chapter1/102.json': '1-2',
+		'Chapter1/103.json': '1-3',
+		'Chapter1/104.json': '1-4',
+		'Chapter1/10101.json': '1-1 Hard',
+		'Chapter1/10102.json': '1-2 Hard',
+		'Chapter1/10103.json': '1-3 Hard',
+		'Chapter1/10104.json': '1-4 Hard',
+	},
+
+	'Chapter 2': {
+		'Chapter2/201.json': '2-1',
+		'Chapter2/202.json': '2-2',
+		'Chapter2/203.json': '2-3',
+		'Chapter2/204.json': '2-4',
+		'Chapter2/10201.json': '2-1 Hard',
+		'Chapter2/10202.json': '2-2 Hard',
+		'Chapter2/10203.json': '2-3 Hard',
+		'Chapter2/10204.json': '2-4 Hard',
+	},
+
+	'Chapter 3': {
+		'Chapter3/301.json': '3-1',
+		'Chapter3/302.json': '3-2',
+		'Chapter3/303.json': '3-3',
+		'Chapter3/304.json': '3-4',
+		'Chapter3/305.json': '3-5',
+		'Chapter3/10301.json': '3-1 Hard',
+		'Chapter3/10302.json': '3-2 Hard',
+		'Chapter3/10303.json': '3-3 Hard',
+		'Chapter3/10304.json': '3-4 Hard',
+	},
+
+	'Chapter 4': {
+		'Chapter4/401.json': '4-1',
+		'Chapter4/402.json': '4-2',
+		'Chapter4/403.json': '4-3',
+		'Chapter4/404.json': '4-4',
+		'Chapter4/405.json': '4-5',
+		'Chapter4/10401.json': '4-1 Hard',
+		'Chapter4/10402.json': '4-2 Hard',
+		'Chapter4/10403.json': '4-3 Hard',
+		'Chapter4/10404.json': '4-4 Hard',
+	},
+
+	'Chapter 5': {
+		'Chapter5/501.json': '5-1',
+		'Chapter5/502.json': '5-2',
+		'Chapter5/503.json': '5-3',
+		'Chapter5/504.json': '5-4',
+		'Chapter5/505.json': '5-5',
+		'Chapter5/10501.json': '5-1 Hard',
+		'Chapter5/10502.json': '5-2 Hard',
+		'Chapter5/10503.json': '5-3 Hard',
+		'Chapter5/10504.json': '5-4 Hard',
+	},
+
+	'Chapter 6': {
+		'Chapter6/601.json': '6-1',
+		'Chapter6/602.json': '6-2',
+		'Chapter6/603.json': '6-3',
+		'Chapter6/604.json': '6-4',
+		'Chapter6/605.json': '6-5',
+		'Chapter6/10601.json': '6-1 Hard',
+		'Chapter6/10602.json': '6-2 Hard',
+		'Chapter6/10603.json': '6-3 Hard',
+		'Chapter6/10604.json': '6-4 Hard',
+	},
+
+	'Chapter 7': {
+		'Chapter7/701.json': '7-1',
+		'Chapter7/702.json': '7-2',
+		'Chapter7/703.json': '7-3',
+		'Chapter7/704.json': '7-4',
+		'Chapter7/705.json': '7-5',
+		'Chapter7/10701.json': '7-1 Hard',
+		'Chapter7/10702.json': '7-2 Hard',
+		'Chapter7/10703.json': '7-3 Hard',
+		'Chapter7/10704.json': '7-4 Hard',
+	},
+
+	'Chapter 8': {
+		'Chapter8/801.json': '8-1',
+		'Chapter8/802.json': '8-2',
+		'Chapter8/803.json': '8-3',
+		'Chapter8/804.json': '8-4',
+		'Chapter8/805.json': '8-5',
+		'Chapter8/10801.json': '8-1 Hard',
+		'Chapter8/10802.json': '8-2 Hard',
+		'Chapter8/10803.json': '8-3 Hard',
+		'Chapter8/10804.json': '8-4 Hard',
+	},
+
+	'Chapter 9': {
+		'Chapter9/901.json': '9-1',
+		'Chapter9/902.json': '9-2',
+		'Chapter9/903.json': '9-3',
+		'Chapter9/904.json': '9-4',
+		'Chapter9/905.json': '9-5',
+		'Chapter9/10901.json': '9-1 Hard',
+		'Chapter9/10902.json': '9-2 Hard',
+		'Chapter9/10903.json': '9-3 Hard',
+		'Chapter9/10904.json': '9-4 Hard',
+	},
+
+	'Chapter 10': {
+		'Chapter10/1001.json': '10-1',
+		'Chapter10/1002.json': '10-2',
+		'Chapter10/1003.json': '10-3',
+		'Chapter10/1004.json': '10-4',
+		'Chapter10/1005.json': '10-5',
+	},
+
+	'Chapter 11': {
+		'Chapter11/1101.json': '11-1',
+		'Chapter11/1102.json': '11-2',
+		'Chapter11/1103.json': '11-3',
+		'Chapter11/1104.json': '11-4',
+	},
+
+	'Chapter 12': {
+		'Chapter12/1201.json': '12-1',
+		'Chapter12/1202.json': '12-2',
+		'Chapter12/1203.json': '12-3',
+		'Chapter12/1204.json': '12-4',
+	},
+
+	'Chapter 13': {
+		'Chapter13/1301.json': '13-1',
+		'Chapter13/1302.json': '13-2',
+		'Chapter13/1303.json': '13-3',
+		'Chapter13/1304.json': '13-4',
+	},
+
 }

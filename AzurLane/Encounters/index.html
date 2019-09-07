@@ -28,8 +28,13 @@
 
 <script>
 $(function(){
-	$.each(maps, function(i, map){
-		$("#map").append(new Option(map, i))
+	$.each(chapters, function(chapter, maps){
+		group = $("<optgroup>");
+		group.attr("label", chapter);
+		$.each(maps, function(json_path, map){
+			group.append(new Option(map, json_path));
+		});
+		$("#map").append(group)
 	});
 });
 
