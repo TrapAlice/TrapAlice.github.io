@@ -1,0 +1,102 @@
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="toc.json"></script>
+
+<style>
+.enemy{
+	margin: 10px;
+	display: inline-block;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+.enemy td {
+	padding: 4px;
+}
+</style>
+
+<div>
+<label>Map</label>
+<select id='map'>
+<option>Select Map</option>
+</select>
+<label>Encounter</label>
+<select id='encounter'>
+</select>
+</div>
+
+<div id='enemies'>
+</div>
+
+<script>
+$(function(){
+	$.each(maps, function(i, map){
+		$("#map").append(new Option(map, i))
+	});
+});
+
+$("#map").change(function(e){
+	json_path = $(this).val();
+	loadMap(json_path);
+});
+
+function loadMap(json_path){
+	map = $.getScript(json_path, function(data){
+		$.each(map["encounters"], function(i, encounter){
+			$("#encounter").append(new Option(encounter["name"], i))
+		});
+		$("#encounter").change();
+	});
+}
+
+function enemytable(enemy){
+	table =
+		"<table class='enemy'>"+
+		"<tr><th colspan=8>" + enemy["name"] + "</th></tr>"+
+		"<tr>" +
+		"<td>HP</td><td>" + enemy["hp"] + "</td>"+
+		"<td>Armor</td><td>" + enemy["armor"] + "</td>"+
+		"<td>Reload</td><td>" + enemy["reload"] + "</td>"+
+		"<td>Luck</td><td>" + enemy["luck"] + "</td>"+
+		"</tr>" +
+		"<tr>" +
+		"<td>FP</td><td>" + enemy["firepower"] + "</td>"+
+		"<td>Torp</td><td>" + enemy["torpedo"] + "</td>"+
+		"<td>Eva</td><td>" + enemy["reload"] + "</td>"+
+		"<td></td><td></td>"+
+		"</tr>" +
+		"<tr>" +
+		"<td>AA</td><td>" + enemy["antiair"] + "</td>"+
+		"<td>Air</td><td>" + enemy["air"] + "</td>"+
+		"<td>Acc</td><td>" + enemy["hit"] + "</td>"+
+		"<td></td><td></td>"+
+		"</tr>" +
+		"</table>";
+	return table;
+}
+$("#encounter").change(function(e){
+	id = $(this).val();
+	encounter = map["encounters"][id];
+	enemies =
+		"<h1>" + encounter["name"] + " (lv " + encounter["level"] + ")</h1>";
+	$.each(encounter["dungeon"]["waves"], function(i, wave){
+		enemies +=
+			"<h3>Wave " + i + " (" + wave["spawn"] + ")</h3>" +
+			"<div class='enemies'>";
+		$.each(wave["enemies"], function(i, enemy){
+			enemies += enemytable(enemy);
+		});
+		enemies += "</div>";
+		if (wave["reinforcements"].length != 0){
+			enemies +=
+				"<h5>Reinforcements</h5>"+
+				"<div class='reinforcements'>";
+			$.each(wave["reinforcements"], function(i, enemy){
+				enemies += enemytable(enemy);
+			});
+
+			enemies += "</div>";
+
+		}
+	});
+	$("#enemies").html(enemies);
+});
+</script>

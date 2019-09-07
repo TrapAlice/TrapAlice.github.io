@@ -1,0 +1,6 @@
+maps = {
+	'Chapter12/1201.json': '12-1',
+	'Chapter12/1202.json': '12-2',
+	'Chapter12/1203.json': '12-3',
+	'Chapter12/1204.json': '12-4',
+}
