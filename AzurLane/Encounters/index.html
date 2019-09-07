@@ -54,6 +54,8 @@ function loadMap(json_path){
 }
 
 function enemytable(enemy){
+	AA_reduction = (1 - (150/(150 + enemy["antiair"]))) * 100;
+	AA_reduction = +AA_reduction.toFixed(2);
 	table =
 		"<table class='enemy'>"+
 		"<tr><th colspan=8>" + enemy["name"] + "</th></tr>"+
@@ -70,7 +72,7 @@ function enemytable(enemy){
 		"<td></td><td></td>"+
 		"</tr>" +
 		"<tr>" +
-		"<td>AA</td><td>" + enemy["antiair"] + "</td>"+
+		"<td>AA</td><td>" + enemy["antiair"] + " (" + AA_reduction + "%)" + "</td>"+
 		"<td>Air</td><td>" + enemy["air"] + "</td>"+
 		"<td>Acc</td><td>" + enemy["hit"] + "</td>"+
 		"<td></td><td></td>"+
