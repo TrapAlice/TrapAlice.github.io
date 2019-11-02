@@ -1,0 +1,40 @@
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="droprates.json"></script>
+
+<style>
+td {
+	padding: 4px;
+}
+</style>
+
+<h1>Chapter 6 - 12 and purple plate dropping event maps S rank (presumed) drop rates</h1>
+
+<div>
+<table>
+<tr>
+<th></th>
+<th>Small</th>
+<th>Medium</th>
+<th>Large</th>
+<th>Elite</th>
+<th>Boss</th>
+</tr>
+</table>
+</div>
+
+<script>
+$(function(){
+	$.each(rates, function(i, rate){
+		row =
+			"<tr>" +
+			"<th>" + rate.V1 + "</th>" +
+			"<td>" + rate.Small + "</td>" +
+			"<td>" + rate.Medium + "</td>" +
+			"<td>" + rate.Large + "</td>" +
+			"<td>" + rate.Elite + "</td>" +
+			"<td>" + rate.Boss + "</td>" +
+			"</tr>";
+		$("table").append(row);
+	});
+});
+</script>
