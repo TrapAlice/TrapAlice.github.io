@@ -10,7 +10,7 @@ td {
 <h1>Chapter 6 - 12 and purple plate dropping event maps S rank (calculated) drop rates</h1>
 
 <div>
-<table>
+<table class='rates'>
 <tr>
 <th></th>
 <th>Small</th>
@@ -22,6 +22,17 @@ td {
 </tr>
 </table>
 </div>
+
+<h3>Plate Ratios</h3>
+<table class='ratio'>
+<tr>
+<th></th>
+<th colspan=2>Recon</th>
+<th colspan=2>Main</th>
+<th colspan=2>Aviation</th>
+<th>Average</th>
+</tr>
+</table>
 
 <script>
 $(function(){
@@ -36,7 +47,29 @@ $(function(){
 			"<td>" + rate["Boss (Campaign)"] + "</td>" +
 			"<td>" + rate["Boss (Event)"] + "</td>" +
 			"</tr>";
-		$("table").append(row);
+		$("table.rates").append(row);
+	});
+
+	row_names = ["Primary", "Secondary", "Tertiary"];
+	types = [
+		["Torpedo", "Main Gun", "Aircraft"],
+		["General<br>Aircraft (ch6-11)", "General", "General"],
+		["Antiair", "Antiair", "Antiair"]
+	];
+	$.each(plate_ratios, function(i, rate){
+		row =
+			"<tr>" +
+			"<th>" + row_names[i] + "</th>" +
+			"<td>" + types[i][0] + ":</td>" +
+			"<td>" + rate[0].toFixed(2) + "</td>" +
+			"<td>" + types[i][1] + ":</td>" +
+			"<td>" + rate[1].toFixed(2) + "</td>" +
+			"<td>" + types[i][2] + ":</td>" +
+			"<td>" + rate[2].toFixed(2) + "</td>" +
+			"<td>" + rate[3].toFixed(2) + "</td>" +
+			"</tr>";
+		$("table.ratio").append(row);
+
 	});
 });
 </script>
