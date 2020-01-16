@@ -86,6 +86,7 @@ $("#encounter").change(function(e){
 	enemies =
 		"<h1>" + encounter["name"] + " (lv " + encounter["level"] + ")</h1>";
 	$.each(encounter["dungeon"]["waves"], function(i, wave){
+		if ($.isEmptyObject(wave)) return true;
 		enemies +=
 			"<h3>Wave " + i + " (" + wave["spawn"] + ")</h3>" +
 			"<div class='enemies'>";
