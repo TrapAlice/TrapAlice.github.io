@@ -111,6 +111,10 @@ chapters = {
 		'Chapter10/1003.json': '10-3',
 		'Chapter10/1004.json': '10-4',
 		'Chapter10/1005.json': '10-5',
+		'Chapter10/11001.json': '10-1 Hard',
+		'Chapter10/11002.json': '10-2 Hard',
+		'Chapter10/11003.json': '10-3 Hard',
+		'Chapter10/11004.json': '10-4 Hard',
 	},
 
 	'Chapter 11': {
